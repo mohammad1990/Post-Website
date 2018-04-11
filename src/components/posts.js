@@ -9,8 +9,11 @@ class PostsIndex extends Component{
   }
   renderPosts()
   {
+    console.log("Count me Out");
+    console.log(this.props.posts.length)
     return _.map(this.props.posts, post=> {
-       return( <li className="list-group-item" key={props.id}>{props.title}</li>)
+          console.log("Count me");
+       return( <li className="list-group-item" key={post.id}>{post.title}</li>)
       });
 
   }
@@ -30,6 +33,8 @@ class PostsIndex extends Component{
 }
 function mapStateToProps(state)
 {
+  console.log("mapStateToProps@");
+   console.log(state.posts.title);
   return{posts: state.posts}
 }
 export default connect(mapStateToProps,{fetchPosts})(PostsIndex)
