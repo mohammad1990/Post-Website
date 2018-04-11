@@ -16,8 +16,8 @@ class PostsIndex extends Component{
   }
   render()
   {
-      console.log("Render");
-        console.log(this.props.posts);
+    console.log(this.props.posts);
+
     return(
       <div>
     <h3>Posts</h3>
@@ -30,6 +30,6 @@ class PostsIndex extends Component{
 }
 function mapStateToProps(state)
 {
-  return{posts:state.posts}
+  return{posts: state.posts}
 }
 export default connect(mapStateToProps,{fetchPosts})(PostsIndex)
